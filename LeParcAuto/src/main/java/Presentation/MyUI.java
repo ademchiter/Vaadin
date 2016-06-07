@@ -75,7 +75,7 @@ public class MyUI extends UI {
         layout.addComponent(contactList);
         layout.addComponent(new Label(" Vistieur"));
         layout.addComponent(contactList2);
-        layout.addComponent(new Label(" Parc de véhicule coutant plus de 16000€"));
+        layout.addComponent(new Label(" Parc de véhicule coutant plus de"+ prix +""));
         layout.addComponent(contactList3);
         //layout.addComponent(contactTable); //était commenter
         
