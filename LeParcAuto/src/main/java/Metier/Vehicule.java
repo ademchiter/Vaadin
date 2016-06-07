@@ -131,14 +131,4 @@ public class Vehicule {
         } 
         return lesVehiculesPrixHaut;
     }
-    public static BeanItemContainer<Vehicule> getVehiculesPrixBas(double prix) {
-        BeanItemContainer<Vehicule> lesVehiculesPrixBas = new BeanItemContainer<>(Vehicule.class);
-        List<Vehicule> listeVehicule = vehicules.getItemIds();
-        for( Vehicule unVehicule : listeVehicule){
-            if(unVehicule.getPrix()< prix){
-                lesVehiculesPrixBas.addBean(unVehicule); //BUG
-            }
-        } 
-        return lesVehiculesPrixBas;
-    }  
 }
