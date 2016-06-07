@@ -34,6 +34,7 @@ public class MyUI extends UI {
     private Grid contactList = new Grid();
     private Grid contactList2 = new Grid();
     private Grid contactList3 = new Grid();
+    private double prix = 15000;
     //private Table contactTable = new Table();
 
     @Override
@@ -52,7 +53,7 @@ public class MyUI extends UI {
         contactList.setSelectionMode(Grid.SelectionMode.SINGLE);//était en commenter
         contactList.setSizeFull();
         
-        contactList3.setContainerDataSource(Vehicule.getVehiculesPrixHaut(15000));
+        contactList3.setContainerDataSource(Vehicule.getVehiculesPrixHaut(prix));
         contactList3.setColumnOrder("marque", "modele", "prix");  // choisir l'ordre des colonnes
         contactList3.removeColumn("id");  // masquer la colonne
         contactList3.setSelectionMode(Grid.SelectionMode.SINGLE);//était en commenter
