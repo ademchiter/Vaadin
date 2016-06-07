@@ -34,6 +34,7 @@ public class MyUI extends UI {
     private Grid contactList = new Grid();
     private Grid contactList2 = new Grid();
     private Grid contactList3 = new Grid();
+    private Grid affectation = new Grid();
     private double prix = 15000;
     //private Table contactTable = new Table();
 
@@ -62,6 +63,7 @@ public class MyUI extends UI {
         contactList2.setContainerDataSource(Visiteur.getVisiteur()); 
         contactList2.setColumnOrder("nom","prenom","adresse","codePostal");
         contactList2.removeColumn("id");
+        //contactList2.removeColumn("utilise");
         contactList2.setSelectionMode(Grid.SelectionMode.SINGLE);//était en commenter
         contactList2.setSizeFull();
     }
