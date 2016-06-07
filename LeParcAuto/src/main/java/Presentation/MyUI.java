@@ -62,6 +62,7 @@ public class MyUI extends UI {
         contactList2.setContainerDataSource(Visiteur.getVisiteur()); 
         contactList2.setColumnOrder("nom","prenom","adresse","codePostal");
         contactList2.removeColumn("id");
+        //contactList2.removeColumn("utilise");
         contactList2.setSelectionMode(Grid.SelectionMode.SINGLE);//était en commenter
         contactList2.setSizeFull();
     }
