@@ -22,7 +22,7 @@ public class Vehicule {
     private String modele;
     private double prix;
     private static BeanItemContainer<Vehicule> vehicules = new BeanItemContainer<>(Vehicule.class);
-    private static BeanItemContainer<Visiteur> unVisiteur = new BeanItemContainer<>(Visiteur.class);
+    private static BeanItemContainer<Visiteur> estAssocie = new BeanItemContainer<>(Visiteur.class);
 
     /**
      * @constructeur

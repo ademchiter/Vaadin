@@ -19,6 +19,7 @@ public class Visiteur {
     private String adresse;
     private int codePostal;
     private static BeanItemContainer<Visiteur> Visiteur = new BeanItemContainer<>(Visiteur.class);
+    private Vehicule utilise;
     
     /**
      * @constructeur
