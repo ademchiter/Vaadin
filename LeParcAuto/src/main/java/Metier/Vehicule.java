@@ -178,7 +178,7 @@ public class Vehicule {
         List<Vehicule> listeVehicule = vehicules.getItemIds();
         for( Vehicule unVehicule : listeVehicule){
             if(unVehicule.verifierControleTechniqueGSB() == true){
-                lesVehiculesConforme.addBean(unVehicule); //BUG
+                lesVehiculesConforme.addBean(unVehicule);
             }
         } 
         return lesVehiculesConforme;
