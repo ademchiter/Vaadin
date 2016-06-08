@@ -21,6 +21,11 @@ public class Vehicule {
     private String marque;
     private String modele;
     private double prix;
+    //attributs rajouter
+    private int killometrage;
+    private boolean controleTechniqueEtat;
+    private int anneeMiseEnService;
+    private boolean controleTechniqueGSB;
     private static BeanItemContainer<Vehicule> vehicules = new BeanItemContainer<>(Vehicule.class);
     private static BeanItemContainer<Visiteur> estAssocie = new BeanItemContainer<>(Visiteur.class);
 
@@ -140,5 +145,24 @@ public class Vehicule {
             }
         } 
         return lesVehiculesPrixBas;
-    }  
+    }
+    
+    /*
+     * procédure qui modifie l'atribut controleTechniqueGSB de l'objet 
+     */
+    public void verifierControleTechniqueGSB(){
+        int annee = 2016;
+        //On effectue le test si 
+        if(this.killometrage < 200000 && this.controleTechniqueEtat == true && (annee - this.anneeMiseEnService) < 10 ){
+            this.controleTechniqueGSB = true;
+        }
+        else{
+            this.controleTechniqueGSB = false;
+        }
+    }
+    
+    /*
+     * retourne une collèction de véhicule conforme
+     */
+    
 }
