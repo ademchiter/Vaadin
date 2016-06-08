@@ -193,8 +193,8 @@ public class VehiculeTest {
     @org.junit.Test
     public void testVerifierControleTechniqueGSB() {
         System.out.println("verifierControleTechniqueGSB");
-        Vehicule instance = new Vehicule();
-        boolean expResult = false;
+        Vehicule instance = new Vehicule(14, "Renault", "Zoe", 24100,20000,true,2014);
+        boolean expResult = true;
         boolean result = instance.verifierControleTechniqueGSB();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

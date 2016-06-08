@@ -137,7 +137,7 @@ public class Vehicule {
         List<Vehicule> listeVehicule = vehicules.getItemIds();
         for( Vehicule unVehicule : listeVehicule){
             if(unVehicule.getPrix()> prix){
-                lesVehiculesPrixHaut.addBean(unVehicule); //BUG
+                lesVehiculesPrixHaut.addBean(unVehicule);
             }
         } 
         return lesVehiculesPrixHaut;
@@ -147,7 +147,7 @@ public class Vehicule {
         List<Vehicule> listeVehicule = vehicules.getItemIds();
         for( Vehicule unVehicule : listeVehicule){
             if(unVehicule.getPrix()< prix){
-                lesVehiculesPrixBas.addBean(unVehicule); //BUG
+                lesVehiculesPrixBas.addBean(unVehicule);
             }
         } 
         return lesVehiculesPrixBas;
@@ -161,7 +161,7 @@ public class Vehicule {
         int annee = 2016;
         //On effectue le test si 
         if(this.killometrage < 200000 && this.controleTechniqueEtat == true && (annee - this.anneeMiseEnService) < 10 ){
-            this.controleTechniqueGSB = true;
+            this.controleTechniqueGSB = true; //modifie l'atribut de l'objet courant
             return true;
         }
         else{
