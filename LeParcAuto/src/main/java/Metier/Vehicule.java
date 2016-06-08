@@ -155,6 +155,7 @@ public class Vehicule {
     
     /*
      * procédure qui modifie l'atribut controleTechniqueGSB de l'objet 
+     * @return boolean 
      */
     public boolean verifierControleTechniqueGSB(){
         int annee = 2016;
