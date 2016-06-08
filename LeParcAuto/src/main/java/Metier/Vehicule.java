@@ -156,14 +156,16 @@ public class Vehicule {
     /*
      * procédure qui modifie l'atribut controleTechniqueGSB de l'objet 
      */
-    public void verifierControleTechniqueGSB(){
+    public boolean verifierControleTechniqueGSB(){
         int annee = 2016;
         //On effectue le test si 
         if(this.killometrage < 200000 && this.controleTechniqueEtat == true && (annee - this.anneeMiseEnService) < 10 ){
             this.controleTechniqueGSB = true;
+            return true;
         }
         else{
             this.controleTechniqueGSB = false;
+            return false;
         }
     }
     
@@ -174,7 +176,7 @@ public class Vehicule {
         BeanItemContainer<Vehicule> lesVehiculesConforme = new BeanItemContainer<>(Vehicule.class);
         List<Vehicule> listeVehicule = vehicules.getItemIds();
         for( Vehicule unVehicule : listeVehicule){
-            if(unVehicule.controleTechniqueGSB == true){
+            if(unVehicule.verifierControleTechniqueGSB() == true){
                 lesVehiculesConforme.addBean(unVehicule); //BUG
             }
         } 

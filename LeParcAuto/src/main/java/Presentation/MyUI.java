@@ -34,6 +34,7 @@ public class MyUI extends UI {
     private Grid contactList = new Grid();
     private Grid contactList2 = new Grid();
     private Grid contactList3 = new Grid();
+    private Grid contactList4 = new Grid();
     private double prix = 15000;
     //private Table contactTable = new Table();
 
@@ -65,6 +66,12 @@ public class MyUI extends UI {
         //contactList2.removeColumn("utilise");
         contactList2.setSelectionMode(Grid.SelectionMode.SINGLE);//était en commenter
         contactList2.setSizeFull();
+        
+        contactList4.setContainerDataSource(Vehicule.getVehiculesConformes());
+        contactList4.setColumnOrder("marque", "modele", "prix");  // choisir l'ordre des colonnes
+        contactList4.removeColumn("id");  // masquer la colonne
+        contactList4.setSelectionMode(Grid.SelectionMode.SINGLE);//était en commenter
+        contactList4.setSizeFull();
     }
 
     private void buildLayout() {
@@ -74,6 +81,8 @@ public class MyUI extends UI {
         // ajouts de composants
         layout.addComponent(new Label(" Parc de véhicule"));
         layout.addComponent(contactList);
+        layout.addComponent(new Label(" Parc de véhicule conforme"));
+        layout.addComponent(contactList4);
         layout.addComponent(new Label(" Vistieur"));
         layout.addComponent(contactList2);
         layout.addComponent(new Label(" Parc de véhicule coutant plus de "+ prix +" €"));
