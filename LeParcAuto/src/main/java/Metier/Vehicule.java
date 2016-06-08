@@ -40,13 +40,19 @@ public class Vehicule {
      * @param id
      * @param marque
      * @param modele
-     * @param prix 
+     * @param prix
+     * @param kilometrage
+     * @param controleTechniqueEtat
+     * @param anneeMiseEnService
      */
-    public Vehicule(int id, String marque, String modele, double prix) {
+    public Vehicule(int id, String marque, String modele, double prix, int kilometrage, boolean controleTechniqueEtat, int anneeMiseEnService) {
         this.id = id;
         this.marque = marque;
         this.modele = modele;
         this.prix = prix;
+        this.killometrage = kilometrage;
+        this.controleTechniqueEtat = controleTechniqueEtat;
+        this.anneeMiseEnService = anneeMiseEnService;
         this.vehicules.addBean(this);
     }
 
@@ -164,5 +170,14 @@ public class Vehicule {
     /*
      * retourne une collèction de véhicule conforme
      */
-    
+    public static BeanItemContainer<Vehicule> getVehiculesConformes() {
+        BeanItemContainer<Vehicule> lesVehiculesConforme = new BeanItemContainer<>(Vehicule.class);
+        List<Vehicule> listeVehicule = vehicules.getItemIds();
+        for( Vehicule unVehicule : listeVehicule){
+            if(unVehicule.controleTechniqueGSB == true){
+                lesVehiculesConforme.addBean(unVehicule); //BUG
+            }
+        } 
+        return lesVehiculesConforme;
+    }
 }

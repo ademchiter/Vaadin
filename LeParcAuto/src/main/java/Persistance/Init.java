@@ -38,13 +38,13 @@ public class Init {
        
 
     /**
-     * Permet de réaliser des tests
+     * Jeu d'essai
      */
     public static void initJeu(){
-       Vehicule vehicule1 = new Vehicule(1, "Renault", "Clio", 10000);
-       Vehicule vehicule2 = new Vehicule(2, "Audi", "A8", 12500);
-       Vehicule vehicule3 = new Vehicule(3, "Toyota", "Yaris", 15005);
-       Vehicule vehicule4 = new Vehicule(4, "Renault", "Zoe", 24100);
+       Vehicule vehicule1 = new Vehicule(1, "Renault", "Clio", 10000,250000,true,2006);
+       Vehicule vehicule2 = new Vehicule(2, "Audi", "A8", 12500,50000,false,2014);
+       Vehicule vehicule3 = new Vehicule(3, "Toyota", "Yaris", 15005,100,true,2006);
+       Vehicule vehicule4 = new Vehicule(4, "Renault", "Zoe", 24100,20000,true,2014);
        
        Visiteur visiteur1 = new Visiteur(1, "Gallet", "Emilien" , "3 impasse berlioz" , 42350);
        Visiteur visiteur2 = new Visiteur(2, "Valjean", "Jean" , "10 rue Victor Hugo" , 42000);
